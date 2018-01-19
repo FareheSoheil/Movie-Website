@@ -1,0 +1,20 @@
+<template>
+  <button class="shabnam" id="mbtn" :style="{backgroundColor: this.color,borderColor:this.color}">{{this.title}}</button>
+</template>
+<style>
+ #mbtn {
+   width: 210px;
+   height: 50px;
+   border: 1px solid;
+   border-radius: 6px;
+   padding: 6px;
+   margin-top: 15px;
+   color: white;
+
+ }
+</style>
+<script>
+  export default {
+    props:['color','title']
+  }
+</script>

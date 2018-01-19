@@ -16,12 +16,20 @@ footer{
 .center-align {
     text-align: center;
 }
+.right-align{
+  text-align: right;
+}
+
+.left-align{
+  text-align: left;
+}
 .zero-margin {
     margin: 0px;
 }
 .zero-padding {
     padding: 0px;
 }
+
 /*RTL settings*/
 [dir=rtl] .dropdown-header, .dropdown-item {
     text-align: right;

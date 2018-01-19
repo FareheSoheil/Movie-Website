@@ -1,43 +1,19 @@
 <template class="container-fluid" xmlns:v-dropdown="http://www.w3.org/1999/xhtml">
 
   <div>
-    <b-navbar type="dark" variant="primary" toggleable>
-      <b-navbar-toggle target="nav_dropdown_collapse"></b-navbar-toggle>
-      <b-collapse is-nav id="nav_dropdown_collapse">
-        <b-navbar-nav>
-          <b-nav-item href="#">Home</b-nav-item>
-          <b-nav-item href="#">Link</b-nav-item>
-          <!-- Navbar dropdowns -->
-          <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-            <b-dropdown-item href="#">FA</b-dropdown-item>
-          </b-nav-item-dropdown>
-          <b-nav-item-dropdown text="User" right>
-            <b-dropdown-item href="#">Account</b-dropdown-item>
-            <b-dropdown-item href="#">Settings</b-dropdown-item>
-          </b-nav-item-dropdown>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
-    <header class="container-fluid">
-      <div class=" row header shabnam">
-        <div id="login" class="col-md-7 col-sm-6" style="border: 2px solid salmon" >
-          <login></login>
-        </div>
-        <div id="search" class="col-md-5 col-sm-6" style="border: 2px solid crimson">
-          <top-search placeholder="جستجوی فیلم . سریال ....."></top-search>
-        </div>
-      </div>
-    </header>
-    <button v-dropdown:foo>Toggle dropdown</button>
-
-    <dropdown name="foo">
-      Hello 🎉
-    </dropdown>
-    <nav-bar></nav-bar>
-    <!--<carousel></carousel>-->
+    <main-header></main-header>
+    <main-search src="~/component/bg.jpg"></main-search>
+    <!--<div class="con">-->
+      <!--<search-title title="titelF(1356)"></search-title>-->
+      <!--<search-input hint="عنوان مورد نظر را وارد کنید"></search-input>-->
+      <!--<circle-button color="greean" icon="fa fa-search"></circle-button>-->
+      <!--<circle-button color="violet" icon="fa fa-search-plus"></circle-button>-->
+    <!--</div>-->
+    <!--<search-title title="abbas alishoon"></search-title>-->
+    <!--<search-input v-model="search_text"  hint="abbas"></search-input>-->
+    <!--<button @click="log">click me</button>-->
+    <!--<span>{{search_text}}</span>-->
+    <!--&lt;!&ndash;<carousel></carousel>&ndash;&gt;-->
 
     <!--<div>-->
       <!--<app-logo></app-logo>-->
@@ -63,38 +39,39 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-import NavBar from '~/components/main/NavBar.vue'
-import TopSearch from '~/components/main/TopSearch.vue'
-import Login from '~/components/main/Login.vue'
-//import Carousel from '~/components/Carousel.vue'
+
+
+import MainHeader from '~/components/main/MainHeader.vue'
+import MainSearch from '~/components/SearchComponents/MainSearch.vue'
+//import SearchTitle from  '~/components/SearchComponents/SearchTitle.vue'
+//import SearchInput from  '~/components/SearchComponents/SearchInput.vue'
+//import CircleButton from  '~/components/SearchComponents/CircleButton.vue'
+//import MButton from  '~/components/SearchComponents/MButton.vue'
 
 export default {
 
+  data(){
+    return {
+      search_text:"salam"
+    }
+  },
   components: {
-    AppLogo,
-    NavBar,
-    TopSearch,
-    Login
-//    Carousel
+    MainHeader,
+    MainSearch,
+//    SearchTitle,
+//    SearchInput,
+//    CircleButton,
+//    MButton
+  },
+  methods:{
+    log:function () {
+      console.log(search_text);
+    }
   }
 }
 </script>
 
 <style>
-
-  .header div{
-    display: inline-block;
-  }
-  #search{
-    text-align: center;
-  }
-  @media(max-width: 574px) {
-    #login {
-      text-align: center;
-      border: 2px solid navajowhite;
-    }
-  }
 
 
 .title {

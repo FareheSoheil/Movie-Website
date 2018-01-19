@@ -28,13 +28,15 @@ module.exports = {
       ],
   },
 	css:[
-      '@/assets/css/global.css',
       '@/assets/css/fonts.css',
       'swiper/dist/css/swiper.css',
       'font-awesome/css/font-awesome.css',
       'bootstrap/dist/css/bootstrap.css',
+      '@/assets/css/global.css',
+      '@/assets/css/offsetRTL.css',
+      // '@/assets/css/bootstrap-vuxe.css',
 	],
-  module: [
+  modules: [
     ['bootstrap-vue/nuxt', { css: false }],
   ],
   plugins: [

@@ -1,30 +1,20 @@
-<template>
-  <nav class="shabnam noSelect navbar navbar-expand-lg navbar-light bg-light" id="myNavbar" style="font-size: 15px">
-    <a class="navbar-brand" href="#">منو</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <!--v-bind:class="{ active: isActive, 'text-danger': hasError }">-->
-        <li v-for="(item, index) in navItems" :key="index" class="nav-item" v-bind:class="{dropdown:item.isdropdown}">
+<template >
+  <b-navbar class="shabnam" id="myNavbar" type="light" variant="light" toggleable>
+    <b-navbar-toggle target="nav_dropdown_collapse" ></b-navbar-toggle>
 
-          <a v-if="item.isdropdown" class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{item.title}}
-          </a>
-          <a v-else class="nav-link" href="#">
-            {{item.title}}
-            <span class="sr-only">(current)</span></a>
-          <div v-if="item.isdropdown" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-
-        </li>
-      </ul>
-    </div>
-  </nav>
+    <b-collapse is-nav id="nav_dropdown_collapse">
+      <b-navbar-nav>
+        <b-nav-item v-for="(item,index) in navItems" v-if="!item.isdropdown" :key="index"  href="#">{{item.title}}</b-nav-item>
+        <!-- Navbar dropdowns -->
+        <b-nav-item-dropdown v-else  :text="item.title" >
+          <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+    </b-collapse >
+  </b-navbar>
 </template>
 
 <script>
@@ -66,9 +56,25 @@
   }
   .dropdown-menu.show {
     background-color:#F8F9F9;
-
   }
-
+  .dropdown-toggle::after {
+    margin-right: 5px;
+  }
+  b-navbar {
+    margin-top: 100px;
+  }
+  #nav_dropdown_collapse , b-navbar-nav , b-nav-item-dropdown{
+    direction:rtl;
+    text-align: right;
+  }
+  /*@media (min-width: 666px) {*/
+    /*.navbar-expand-sm {*/
+      /*-ms-flex-flow: row nowrap;*/
+      /*flex-flow: row nowrap;*/
+      /*-ms-flex-pack: start;*/
+      /*justify-content: flex-start;*/
+    /*}*/
+  /*}*/
   @media screen and (min-width: 600px) {
     .navbar-brand {
       display: none;
@@ -80,7 +86,7 @@
     }
 
     .dropdown-menu.show {
-      width: 95%;
+      /*width: 95%;*/
     }
   }
 </style>
