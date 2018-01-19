@@ -1,0 +1,130 @@
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+footer{
+    background-color:#F2F3F4;
+    height: auto;
+}
+.Lfloat{
+    float: left;
+}
+
+
+
+.center-align {
+    text-align: center;
+}
+.zero-margin {
+    margin: 0px;
+}
+.zero-padding {
+    padding: 0px;
+}
+/*RTL settings*/
+[dir=rtl] .dropdown-header, .dropdown-item {
+    text-align: right;
+}
+
+[dir=rtl] .dropdown-toggle:after {
+    margin-right: .255em;
+}
+
+[dir=rtl] .modal-header .close {
+    margin-left: 0 !important;
+    margin-right: 235.75px !important;
+}
+
+[dir=rtl] #toasted-container .toasted .action {
+    margin: 5px 7px 5px -7px !important;
+    color: white !important;
+}
+/*End of RTL setting*/
+.btn-group {
+    direction: ltr;
+}
+
+
+/*footer*/
+#footerMenu {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #212F3D;
+}
+#footerRightText{
+    margin-right:15px ;
+    border: 2px solid #7F8C8D;
+    border-radius: 4px;
+    color:#424949 ;
+    line-height: 200%;
+    padding: 15px;
+}
+#footerLeftBox {
+    line-height: 200%;
+    padding-right: 2em;
+}
+#footerBoxes {
+    width: 70%;
+}
+#footerRightBox{
+    text-align: center;
+    font-size: 15px;
+}
+#footerMenu div {
+    text-align:center;
+    display: inline-block;
+    margin-right:5px;
+    font-size: 12px;
+}
+#socialMedias {
+    padding-right: 2rem;
+}
+#socialMediaContainter {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+#socialMedias div {
+    margin-left: 5%;
+    display: inline-block;
+}
+#footNote {
+    border-top: 2px solid dodgerblue;
+    height: 70px;
+    color: dodgerblue;
+    padding-top: 20px;
+}
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@media screen and (max-width: 992px) {
+
+    #socialMediaContainter{
+        margin-top: 20px;
+    }
+    #socialMedias div {
+        margin-left: 3%;
+    }
+
+}
+
+
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    line-height: 3;
+}
+/**/
+
+
+.shabnam {
+    font-family: 'shabnam' , sans-serif;
+    /*font-size: 5;*/
+}
