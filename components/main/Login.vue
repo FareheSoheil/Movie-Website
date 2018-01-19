@@ -42,15 +42,18 @@
     background-color: blue;
     padding: 7px;
     margin-right: 10px;
+
   }
   #loginContainer{
     padding-right: 50px;
     padding-bottom: 9px;
+    float: right;
   }
 
   @media(max-width: 574px) {
     #loginContainer{
       padding-right: 0px;
+      float: none;
     }
   }
 </style>
