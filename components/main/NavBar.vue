@@ -1,5 +1,5 @@
 <template >
-  <b-navbar class="shabnam" id="myNavbar" type="light" variant="light" toggleable>
+  <b-navbar class="shabnam  " id="myNavbar" type="light" variant="light" toggleable>
     <b-navbar-toggle target="nav_dropdown_collapse" ></b-navbar-toggle>
 
     <b-collapse is-nav id="nav_dropdown_collapse">

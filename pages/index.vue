@@ -1,8 +1,19 @@
-<template class="container-fluid" xmlns:v-dropdown="http://www.w3.org/1999/xhtml">
-
+<template xmlns:v-dropdown="http://www.w3.org/1999/xhtml">
+  <!--<div class="ctr">-->
+    <!--<div v-swiper:mySwiper="swiperOption">-->
+      <!--<div class="swiper-wrapper">-->
+        <!--<div class="swiper-slide" v-for="(banner,index) in banners" :key="index">-->
+          <!--<img :src="banner">-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="swiper-pagination"></div>-->
+    <!--</div>-->
+  <!--</div>-->
   <div>
     <main-header></main-header>
-    <main-search src="~/component/bg.jpg"></main-search>
+      <main-search src="~/component/bg.jpg"></main-search>
+      <vue-swiper></vue-swiper>
+  </div>
     <!--<div class="con">-->
       <!--<search-title title="titelF(1356)"></search-title>-->
       <!--<search-input hint="عنوان مورد نظر را وارد کنید"></search-input>-->
@@ -35,7 +46,7 @@
           <!--class="button--grey">GitHub</a>-->
       <!--</div>-->
     <!--</div>-->
-  </div>
+  <!--</div>-->
 </template>
 
 <script>
@@ -43,6 +54,7 @@
 
 import MainHeader from '~/components/main/MainHeader.vue'
 import MainSearch from '~/components/SearchComponents/MainSearch.vue'
+import VueSwiper from '~/components/VueSwiper.vue'
 //import SearchTitle from  '~/components/SearchComponents/SearchTitle.vue'
 //import SearchInput from  '~/components/SearchComponents/SearchInput.vue'
 //import CircleButton from  '~/components/SearchComponents/CircleButton.vue'
@@ -52,22 +64,20 @@ export default {
 
   data(){
     return {
-      search_text:"salam"
+      search_text:"salam",
+      banners: [1,2,3,4,5,6,7,8,9,10].map(i => `http://lorempixel.com/200/300/cats/${i}`),
     }
   },
   components: {
     MainHeader,
     MainSearch,
+    VueSwiper
 //    SearchTitle,
 //    SearchInput,
 //    CircleButton,
 //    MButton
   },
-  methods:{
-    log:function () {
-      console.log(search_text);
-    }
-  }
+
 }
 </script>
 

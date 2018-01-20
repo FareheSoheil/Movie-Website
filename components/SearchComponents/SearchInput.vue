@@ -1,7 +1,5 @@
 <template>
-
     <input id="input" :placeholder="this.hint"/>
-
 </template>
 <style>
   #input {
