@@ -12,7 +12,7 @@
     margin-top: 15px;
   }
 
-  @media(max-width:600px) {
+  @media(max-width:800px) {
     #input {
       width: 90%;
     }

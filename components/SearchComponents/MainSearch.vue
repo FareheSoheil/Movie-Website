@@ -1,25 +1,25 @@
 <template  class="container-fluid" >
   <div class="container-fluid con">
     <div class="row">
-      <div class="col-md-6 col-md-offset-right-4">
+      <div class="col-lg-6 col-lg-offset-right-4">
         <search-title class="col-12" :title="titleF(1356)"></search-title>
       </div>
     </div>
     <div class="row" style="text-align: center">
 
-      <div class="col-md-6 order-md-12 right-align ">
+      <div id="input-container" class="col-lg-6 order-lg-12 right-align ">
         <search-input  hint="عنوان مورد نظر را وارد کنید"></search-input>
       </div>
 
-      <div id="circleCont" class="col-md-2  order-md-1 col-md-offset-right-2 left-align" style="border: 4px solid salmon; padding: 0px">
+      <div id="circleCont" class="col-lg-2  order-lg-1 col-lg-offset-right-2 left-align" style="border: 4px solid salmon; padding: 0px">
         <circle-button color="green" icon="fa fa-search"></circle-button>
         <circle-button color="violet" icon="fa fa-search-plus"></circle-button>
       </div>
 
     </div>
     <div class="row">
-      <div class="col-md-1 col-md-offset-right-7">
-        <m-button color="goldenrod" title="جستجو"></m-button>
+      <div class="col-lg-1 col-lg-offset-right-7">
+        <m-button color="goldenrod" bcolor="goldenrod"  title="جستجو"></m-button>
       </div>
     </div>
 
@@ -31,13 +31,14 @@
   padding-top: 80px;
   padding-bottom: 80px;
   background: url("/bg.jpg");
-  /*background: no-repeat;*/
-  /*background-size: cover;*/
-  /*color: goldenrod;*/
+
 }
-  @media (max-width:600px ) {
+  @media (max-width:800px ) {
     #circleCont{
       text-align: center;
+    }
+    #input-container{
+      text-align: center  ;
     }
   }
 </style>

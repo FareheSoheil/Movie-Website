@@ -1,5 +1,5 @@
 <template>
-  <button class="shabnam" id="mbtn" :style="{backgroundColor: this.color,borderColor:this.color}">{{this.title}}</button>
+  <button class="shabnam" id="mbtn" :style="{backgroundColor: this.color,borderColor:this.bcolor}">{{this.title}}</button>
 </template>
 <style>
  #mbtn {
@@ -15,6 +15,6 @@
 </style>
 <script>
   export default {
-    props:['color','title']
+    props:['color','title','bcolor']
   }
 </script>
