@@ -3,6 +3,7 @@ module.exports = {
   ** Headers of the page
   *
   */
+  srcDir: 'front',
   mode: "spa",
   head: {
 
