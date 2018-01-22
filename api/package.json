@@ -1,0 +1,24 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "this is the backend for god's sake",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FareheSoheil/Hapi_Backend.git"
+  },
+  "author": "farehe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FareheSoheil/Hapi_Backend/issues"
+  },
+  "homepage": "https://github.com/FareheSoheil/Hapi_Backend#readme",
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "mongodb": "^3.0.1",
+    "mongoose": "^5.0.1"
+  }
+}
