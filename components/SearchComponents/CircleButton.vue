@@ -1,11 +1,16 @@
 <template>
-    <button id="circlebtn" :style="{'background-color':this.color,'border-color':this.color}">
+    <button id="circlebtn" @click="clicked" :style="{'background-color':this.color,'border-color':this.color}">
       <i :class="this.icon"></i>
     </button>
 </template>
 <script>
   export default {
     props:['icon','color'],
+    methods: {
+      clicked(e){
+        this.$emit('click',e);
+      }
+    }
   }
 </script>
 <style>

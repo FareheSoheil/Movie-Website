@@ -1,5 +1,5 @@
 <template>
-    <input id="input" :placeholder="this.hint"/>
+  <input id="input" :value="value"  @input="onInput" :placeholder="hint"/>
 </template>
 <style>
   #input {
@@ -21,8 +21,12 @@
 </style>
 <script>
   export default {
-    props:['hint'],
+
+    props:['value','hint'],
+    methods: {
+      onInput(e) {
+        this.$emit('input', e.target.value)
+      }
+    }
   }
-
-
 </script>

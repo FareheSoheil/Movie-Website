@@ -56,7 +56,7 @@
       </div>
     </div>
     <under-lined-menu></under-lined-menu>
-
+    <vue-slider></vue-slider>
     <main-footer></main-footer>
     <button>hhhhhhhhhh</button>
     {{Title}}
@@ -396,13 +396,15 @@
   import MainSearch from '~/components/SearchComponents/MainSearch.vue'
   import MainFooter from '~/components/FooterComponents/MainFooter.vue'
   import UnderLinedMenu from '~/components/MoviePage/UnderLinedMenu.vue'
+  import VueSlider from '~/components/MoviePage/VueSlider.vue'
   import axios from 'axios'
 
   export default {
     components: {
       MainHeader,
       MainFooter,
-      UnderLinedMenu
+      UnderLinedMenu,
+      VueSlider
     },
     data(){
       return {

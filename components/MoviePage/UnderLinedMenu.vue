@@ -14,7 +14,7 @@
 </template>
 <style>
   #slider {
-    border: 2px solid salmon;
+    /*border: 2px solid salmon;*/
     padding-top: 10px;
     border-bottom: 1px solid gray;
     text-align: center;

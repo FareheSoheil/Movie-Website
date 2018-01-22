@@ -7,19 +7,19 @@
     </div>
     <div class="row" style="text-align: center">
 
-      <div id="input-container" class="col-lg-6 order-lg-12 right-align ">
-        <search-input  hint="عنوان مورد نظر را وارد کنید"></search-input>
+      <div  @click="show"  id="input-container" class="col-lg-6 order-lg-12 right-align ">
+        <search-input  hint="عنوان مورد نظر را وارد کنید" v-model="search"></search-input>
       </div>
 
       <div id="circleCont" class="col-lg-2  order-lg-1 col-lg-offset-right-2 left-align" style="border: 4px solid salmon; padding: 0px">
-        <circle-button color="green" icon="fa fa-search"></circle-button>
+        <circle-button @click="show" color="green" icon="fa fa-search"></circle-button>
         <circle-button color="violet" icon="fa fa-search-plus"></circle-button>
       </div>
 
     </div>
     <div class="row">
       <div class="col-lg-1 col-lg-offset-right-7">
-        <m-button color="goldenrod" bcolor="goldenrod"  title="جستجو"></m-button>
+        <m-button @click="show" color="goldenrod" bcolor="goldenrod"  title="جستجو"></m-button>
       </div>
     </div>
 
@@ -56,9 +56,18 @@
       CircleButton,
       MButton
     },
+    data() {
+      return {
+        search: ''
+      }
+    },
     methods: {
       titleF(num) {
+//        console.log("this is search" + this.search);
         return "دانلود فیلم سریال انیمیشن مستند و دوبله با بیش از "+num+"عنوان";
+      },
+      show(e) {
+        console.log("this is search" + this.search);
       }
     }
   }

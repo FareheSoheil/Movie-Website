@@ -1,5 +1,5 @@
 <template>
-  <button class="shabnam" id="mbtn" :style="{backgroundColor: this.color,borderColor:this.bcolor}">{{this.title}}</button>
+  <button @click="clicked" class="shabnam" id="mbtn" :style="{backgroundColor: this.color,borderColor:this.bcolor}">{{this.title}}</button>
 </template>
 <style>
  #mbtn {
@@ -15,6 +15,11 @@
 </style>
 <script>
   export default {
-    props:['color','title','bcolor']
+    props:['color','title','bcolor'],
+    methods: {
+      clicked(e){
+        this.$emit('click',e);
+      }
+    }
   }
 </script>

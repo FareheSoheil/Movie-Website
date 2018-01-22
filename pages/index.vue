@@ -22,6 +22,7 @@ import FilmCardSwiper from '~/components/Swipers/FilmCardSwiper.vue'
 import SimpleFilmSwiper from '~/components/Swipers/SimpleFilmSwiper.vue'
 import StaticBanner from '~/components/StaticBanner.vue'
 import MainFooter from '~/components/FooterComponents/MainFooter.vue'
+import VueSlider from '~/components/MoviePage/VueSlider.vue'
 
 export default {
   components: {
@@ -42,8 +43,8 @@ export default {
       },
 //     go(){
        async go(){
-//         let data = await this.$axios.$get('http://www.omdbapi.com/?t=rain+man&apikey=51425d95');
-//         console.log(data.data);
+         let data = await this.$axios.$get('');
+         console.log(data.data);
          this.$router.push('/Movie/222');
 
        },
