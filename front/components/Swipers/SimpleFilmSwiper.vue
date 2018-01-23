@@ -16,10 +16,10 @@
         </div>
       </div>
     </div>
-    <div id="simple-swiper" v-swiper:mySwiper="swiperOption" style="border: 2px solid navy" >
+    <div id="simple-swiper" v-swiper:mySwiper="swiperOption"  >
       <div class="swiper-wrapper">
-        <div id="simple-slide" style="border: solid 2px greenyellow" class="swiper-slide"  @click="hello()" v-for="(ss,index) in swiperSlides" :key="index">
-            <img @click="nextPage(ss.title)" class="swiper-item simple-item" :src="ss.src">
+        <div id="simple-slide" class="swiper-slide"  @click="hello()" v-for="(ss,index) in swiperSlides" :key="index">
+            <img @click="nextPage(ss._id)" class="swiper-item simple-item" :src="ss.Poster">
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -37,12 +37,9 @@
     padding-top: 30px;
     background-color: black;
     padding-bottom: 30px;
-    /*border: 4px solid seagreen;*/
   }
   #simple-swiper-menu {
     padding-right: 15px;
-    /*background-color: fuchsia;*/
-    /**/
   }
   #simple-swiper-menu span {
     font-size: small;
@@ -60,7 +57,6 @@
     height:400px;
   }
   .simple-item {
-    border: 2px solid crimson;
     width: inherit;
     height: inherit
   }
@@ -83,21 +79,19 @@
     data() {
       return {
         search_text: "salam",
-        swiperSlides: [
-//          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => `http://lorempixel.com/200/300/cats/${i}`)
-          {title:"memoirs+of+a+geisha",src:`https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxMzM4NTEzOV5BMl5BanBnXkFtZTcwNDMwNjQzMw@@._V1_SX300.jpg`},
-          {titel:"",src:``},
-          {titel:"",src:``},
-          {titel:"",src:``},
-          {titel:"",src:``},
+        s:{
+          type:String
+        },
+        swiperNum: 10 ,
 
+        swiperSlides: [
         ],
         swiperOption: {
           pagination: {
             clickable: true
           },
-          loop:true,
-          slidesPerView: 5,
+//          loop:true,
+          slidesPerView: 6,
           spaceBetween: 50,
           navigation: {
             nextEl: '.swiper-button-next',
@@ -124,10 +118,15 @@
         }
       }
     },
+    beforeMount(){
+      this.getRecent();
+    },
     methods: {
-      async nextPage(title){
-//          this.$router.push('/Movie/'+title);
-          this.$router.push('/Movie/'+title);
+      async getRecent(){
+          this.swiperSlides = await  this.$axios.$get('http://localhost:8050/movies/recent/'+this.swiperNum);
+      },
+      async nextPage(id){
+          this.$router.push('/Movie/'+id);
       },
       appendSlide() {
         this.swiperSlides.push(this.swiperSlides.length + 1)
@@ -141,9 +140,6 @@
       shiftSlide() {
         this.swiperSlides.shift()
       },
-      hello(){
-        console.log("hiiiiiiiiiiiiiiiiiiiii");
-      }
     }
 
   }

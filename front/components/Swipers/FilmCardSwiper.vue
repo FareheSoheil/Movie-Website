@@ -5,12 +5,12 @@
       <div class="swiper-wrapper">
       <div id="card-slide" class="swiper-slide"  @click="hello()" v-for="(ss,index) in swiperSlides" :key="index">
         <div id="swiper-img-container" :style="{'background-color':colors[index%(colors.length)].upper}">
-          <img class="swiper-item card-item" :src="ss.src">
+          <img class="swiper-item card-item" :src="ss.Poster">
         </div>
         <div  id="bottomDiv" :style="{'background-color':colors[index%(colors.length)].bottom}" >
-          <span class="genre" v-for="(g,i) in gener[index%(gener.length)]" :key="i" >{{g}}</span>
+          <span class="genre" v-for="(g,i) in ss.Genre.split(',') " v-if="i<2" :key="i" >{{g}}</span>
           <div id="rate-qual">
-            <i class="fa fa-star" aria-hidden="true" style="color: yellow;"><i style="border: none;color: black">55</i></i>
+            <i class="fa fa-star" aria-hidden="true" style="color: yellow;"><i style="border: none;color: black">{{ss.Metascore}}</i></i>
            <i>bluray</i>
           </div>
         </div>
@@ -98,13 +98,13 @@
           ["درام" , "کمدی" , "ترسناک" ],
         ],
         swiperSlides: [
-          {titel:"",src:`https://images-na.ssl-images-amazon.com/images/M/MV5BMzVjNzI4NzYtMjE4NS00M2IzLWFkOWMtOTYwMWUzN2ZlNGVjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg`},
-          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
-          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
-          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
-          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
-          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
-          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
+//          {titel:"",src:`https://images-na.ssl-images-amazon.com/images/M/MV5BMzVjNzI4NzYtMjE4NS00M2IzLWFkOWMtOTYwMWUzN2ZlNGVjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg`},
+//          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
+//          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
+//          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
+//          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
+//          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
+//          {titel:"",src:`http://lorempixel.com/200/300/cats/5`},
 
         ],
         swiperOption: {
@@ -140,7 +140,22 @@
         }
       }
     },
+    mounted(){
+        this.allMovies();
+    },
     methods: {
+      async allMovies() {
+          console.log("this is from film card");
+          try {
+            let data = await this.$axios.$get('http://localhost:8050/movies/all');
+            console.log(data);
+            this.swiperSlides = data;
+              let id = data[0]._id;
+
+          }catch (e) {
+          }
+
+      },
       appendSlide() {
         this.swiperSlides.push(this.swiperSlides.length + 1)
       },

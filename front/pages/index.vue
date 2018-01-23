@@ -9,9 +9,11 @@
       :explanation2="setExp('از بهترین نبردهای بروسلی!')"
       :bTitle="setExp('طرفدارایه بروسلی دانلود کنن')"
     ></static-banner>
+
     <film-card-swiper></film-card-swiper>
     <main-footer></main-footer>
     <button @click="go()">ajax for god's sake</button>
+    {{s}}
   </div>
 </template>
 
@@ -34,6 +36,14 @@ export default {
     MainFooter
 
   },
+  data(){
+    return{
+      s : {
+        type:String
+      },
+
+    }
+  },
   methods:{
       setBg(){
         return "https://images-na.ssl-images-amazon.com/images/M/MV5BMzVjNzI4NzYtMjE4NS00M2IzLWFkOWMtOTYwMWUzN2ZlNGVjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg";
@@ -41,10 +51,17 @@ export default {
       setExp(str){
         return str;
       },
+
 //     go(){
        async go(){
-         let data = await this.$axios.$get('/generateResponse.js');
-         console.log(data.data);
+//         let data = await this.$axios.$get('http://localhost:8050/api');
+//         console.log("data is :"+data);
+//         this.s = data[0].Title;
+//         for (let i=0;i<data.length;i++) {
+//           console.log("datas are : "+data[i].Title);
+//         }
+//         console.log("this is value: ");
+         console.log(this.s);
 //         this.$router.push('/Movie/222');
 
        },

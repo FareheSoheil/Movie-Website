@@ -1,5 +1,5 @@
 <template>
-  <footer class="container-fluid">
+  <footer class="container-fluid shabnam">
     <footer-top-menu></footer-top-menu>
     <footer-text></footer-text>
     <footer-note></footer-note>

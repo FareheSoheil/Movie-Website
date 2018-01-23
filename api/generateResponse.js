@@ -6,13 +6,13 @@ const Hapi = require('hapi');
 
 
 const server = new Hapi.Server();
-server.connection({ port: 8050, host: 'localhost' });
+server.connection({ port: 8050, host: 'localhost' ,routes: { cors: true }});
 
-
+// server.connection({  });
 
 server.route({
     method: 'GET',
-    path: '/api/',
+    path: '/api',
     handler: function (request, reply) {
         console.log("hi you knocked");
         reply('Hello, world!');

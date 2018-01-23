@@ -11,7 +11,6 @@
     margin: 10px;
     margin-top: 15px;
   }
-
   @media(max-width:800px) {
     #input {
       width: 90%;
@@ -22,7 +21,12 @@
 <script>
   export default {
 
+
     props:['value','hint'],
+    data(){
+      return {
+      }
+    },
     methods: {
       onInput(e) {
         this.$emit('input', e.target.value)

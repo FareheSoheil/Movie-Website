@@ -32,12 +32,14 @@ module.exports = {
 	],
   modules: [
     ['bootstrap-vue/nuxt', { css: false }],
-    ['@nuxtjs/axios']
+    ['@nuxtjs/axios'],
+    // ['vue-search-select']
 
   ],
   plugins: [
     { src: '~/plugins/swiper.js', ssr: false },
     { src: '~/plugins/dropDown.js', ssr: false },
+    { src: '~/plugins/vueSelect.js', ssr: false },
   ],
   /*
   ** Customize the progress bar color

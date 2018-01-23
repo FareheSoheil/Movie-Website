@@ -408,7 +408,9 @@
     },
     data(){
       return {
-        movie:''
+        movie:{
+          type:{}
+        }
       }
     },
     mounted() {
@@ -417,12 +419,14 @@
 
     async asyncData({ params, error }) {
       try {
-        let movie = params.movieInf;
+        let id = params.movieInf;
         console.log("still waiting .....");
-        let data = await axios.get('http://www.omdbapi.com/?t=' + movie + '&apikey=51425d95');
+        let data = await axios.get('http://localhost:8050/movies/'+id+'/details');
         console.log("received");
         console.log(data.data);
-        return data.data;
+//        this.movie = data.data;
+        console.log("this is recieved fields : "+data.data[0].Title);
+        return data.data[0];
       }catch (e) {
         error({ message: 'Movie not found', statusCode: 404 })
       }
