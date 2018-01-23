@@ -12,9 +12,9 @@
         <!--<search-input  @input="tell" hint="عنوان مورد نظر را وارد کنید" v-model="search"></search-input>-->
       </div>
 
-      <div id="circleCont" class="col-lg-2  order-lg-1 col-lg-offset-right-2 left-align" style="border: 4px solid salmon; padding: 0px">
-        <circle-button color="green" icon="fa fa-search"></circle-button>
-        <circle-button color="violet" icon="fa fa-search-plus"></circle-button>
+      <div id="circleCont" class="col-lg-2  order-lg-1 col-lg-offset-right-2 left-align" >
+        <circle-button color="mediumseagreen" icon="fa fa-search"></circle-button>
+        <circle-button color="darkviolet" icon="fa fa-search-plus"></circle-button>
       </div>
 
     </div>
@@ -28,17 +28,15 @@
   </div>
 </template>
 <style>
-  #searchRes {
-    width: 250px;
-    height: 300px;
-    border: 2px solid yellowgreen;
-    display: none;
-  }
+
 .con {
   text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
-  background: url("/bg.jpg");
+  /*border: 2px solid darkviolet;*/
+  background: url("/ncbg.v2.jpg");
+  background-size:auto;
+  opacity: .9;
 
 }
   @media (max-width:800px ) {

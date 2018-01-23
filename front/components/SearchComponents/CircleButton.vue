@@ -23,6 +23,7 @@
     margin: 5px;
     margin-top: 15px;
     font-size: 18px;
+    opacity:.8;
   }
 
 </style>

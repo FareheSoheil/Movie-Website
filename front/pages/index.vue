@@ -1,7 +1,7 @@
 <template>
   <div>
     <main-header></main-header>
-    <main-search src="~/component/bg.jpg"></main-search>
+    <main-search></main-search>
     <simple-film-swiper></simple-film-swiper>
     <static-banner
       color="red" :src="setBg()"
@@ -46,34 +46,11 @@ export default {
   },
   methods:{
       setBg(){
-        return "https://images-na.ssl-images-amazon.com/images/M/MV5BMzVjNzI4NzYtMjE4NS00M2IzLWFkOWMtOTYwMWUzN2ZlNGVjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg";
+        return "/bruce.jpg"
       },
       setExp(str){
         return str;
       },
-
-//     go(){
-       async go(){
-//         let data = await this.$axios.$get('http://localhost:8050/api');
-//         console.log("data is :"+data);
-//         this.s = data[0].Title;
-//         for (let i=0;i<data.length;i++) {
-//           console.log("datas are : "+data[i].Title);
-//         }
-//         console.log("this is value: ");
-         console.log(this.s);
-//         this.$router.push('/Movie/222');
-
-       },
-
-//      axios.get('http://www.omdbapi.com/?t=rain+man&apikey=51425d95')
-//        .then(function (response) {
-//          console.log(response);
-//        })
-//        .catch(function (error) {
-//          console.log(error);
-//        });
-//    }
   }
 }
 </script>

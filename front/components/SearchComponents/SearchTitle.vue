@@ -5,6 +5,7 @@
 <style>
  #title {
    text-align: right;
+   color: white;
    /*border: 4px solid gold;*/
    /*width: 340px;*/
    background-color: transparent;

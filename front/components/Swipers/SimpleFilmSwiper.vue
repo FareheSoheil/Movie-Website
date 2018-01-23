@@ -18,8 +18,13 @@
     </div>
     <div id="simple-swiper" v-swiper:mySwiper="swiperOption"  >
       <div class="swiper-wrapper">
-        <div id="simple-slide" class="swiper-slide"  @click="hello()" v-for="(ss,index) in swiperSlides" :key="index">
-            <img @click="nextPage(ss._id)" class="swiper-item simple-item" :src="ss.Poster">
+        <div id="simple-slide" class="swiper-slide"  v-for="(ss,index) in swiperSlides" :key="index">
+
+            <div class="swiper-item simple-item">
+              <img :src="ss.Poster">
+              <over-lay @click="nextPage(ss._id)" :name="ss.Title" :year="ss.Year"></over-lay>
+            </div>
+
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -33,6 +38,15 @@
 
 </template>
 <style>
+
+  .swiper-item.simple-item:hover img{
+    opacity: .3;
+  }
+  .swiper-item.simple-item img {
+    width: inherit;
+    height: inherit;
+  }
+  .swiper-item.simple-item:hover .overlay{opacity: 5}
   .simple-ctr {
     padding-top: 30px;
     background-color: black;
@@ -58,7 +72,8 @@
   }
   .simple-item {
     width: inherit;
-    height: inherit
+    height: inherit;
+
   }
   #simple-swiper-menu span:hover {
     background-color: darkgray;
@@ -75,7 +90,12 @@
 </style>
 
 <script>
+  import OverLay from '~/components/Swipers/OverLay'
+
   export default {
+    components:{
+      OverLay
+    },
     data() {
       return {
         search_text: "salam",
