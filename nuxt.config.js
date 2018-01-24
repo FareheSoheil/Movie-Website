@@ -38,7 +38,7 @@ module.exports = {
   ],
   plugins: [
     { src: '~/plugins/swiper.js', ssr: false },
-    { src: '~/plugins/dropDown.js', ssr: false },
+    { src: '~/plugins/vueslider.js', ssr: false },
     { src: '~/plugins/vueSelect.js', ssr: false },
   ],
   /*

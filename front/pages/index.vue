@@ -24,7 +24,7 @@ import FilmCardSwiper from '~/components/Swipers/FilmCardSwiper.vue'
 import SimpleFilmSwiper from '~/components/Swipers/SimpleFilmSwiper.vue'
 import StaticBanner from '~/components/StaticBanner.vue'
 import MainFooter from '~/components/FooterComponents/MainFooter.vue'
-import VueSlider from '~/components/MoviePage/VueSlider.vue'
+import VueSlider from '~/components/Slider/VueCompSlider.vue'
 
 export default {
   components: {

@@ -39,7 +39,7 @@
   export default {
     data(){
       return{
-        isActive:[true,false,false,false,false,false,false]
+        isActive:[false,false,true,false,false,false,false]
       }
     },
     methods:{

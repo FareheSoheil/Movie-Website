@@ -19,7 +19,7 @@
           <!--<div class="container-fluid">-->
             <div class="row" id="firstRow" >
                         <span id="voteStat" ><i class="fa fa-star" aria-hidden="true" style="color: yellow;"></i>&nbsp;
-                            <i>    {{Ratings[0].Value.split('/')[0]}}  از 10 </i>
+                            <i v-if="empty(Ratings)">{{Ratings[0].Value.split('/')[0]}}  از 10 </i>
                             <i >با {{imdbVotes}} </i>
                             <i>رای</i>
                         </span>
@@ -51,18 +51,74 @@
           <!--</div>-->
         </div>
         <div class="col-md-3 col-lg-4"  id="wallpaper" >
-          <img :src="Poster">
+          <img :src="this.img" >
+        </div>
+      </div>
+
+    </div>
+    <under-lined-menu></under-lined-menu>
+    <new-comment :movieId="movie"></new-comment>
+    <div id="wholeContainer">
+      <div class="container" id="progressContainer">
+        <div class="row">
+          <div class="col-5">
+            <div style="color: mediumspringgreen">ارزش دانلود از ۱۰ </div>
+            <div class="progress" >
+              <div class="progress-bar bg-success"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%;"></div>
+            </div>
+            <div style="color: darkgray;font-size: 12px;">
+              نتایج آرای کاربران بر اساس کارگردانی+فیلمنامه+بازیگران
+            </div>
+          </div>
+          <div class="col-4">
+            <div id="middleDiv">
+              ۵۵ نفر از ۶۲ نفر تماشای این انیمیشن را پیشنهاد کرده اند
+            </div>
+          </div>
+          <div class="col-3" id="rateContainer">
+            <div>شما هم بر اساس ارزش دانلود به انیمیشن رای دهید</div>
+            <button>
+              امتیاز دهید
+            </button>
+
+          </div>
+        </div>
+        <hr id="hr1">
+      </div>
+    </div>
+    <div class="container" id="addMovie">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-right-2" id="addMovietxt">
+            <span>برای اضافه کردن فیلم جدید روی  دکمه روبرو کلیک کنید</span>
+        </div>
+        <div class="col-md-4">
+          <button @click="addMovie" id="addMovieBtn">add movie</button>
         </div>
       </div>
     </div>
-    <under-lined-menu></under-lined-menu>
-    <vue-slider></vue-slider>
+
+    <old-comment :movieId="movie"></old-comment>
     <main-footer></main-footer>
-    <button>hhhhhhhhhh</button>
-    {{Title}}
+    <!--<button>hhhhhhhhhh</button>-->
+
   </div>
 </template>
 <style>
+  #addMovietxt{
+    padding: 15px 10px 15px 0;
+    color: darkgoldenrod;
+    font-size: 17px;
+  }
+  #addMovieBtn {
+    border-radius: 6px;
+    border: 1px solid darkorange;
+    background-color: darkorange;
+    width: 210px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
   #ajaxContainer {
     padding-bottom: 20px;
     background: linear-gradient(to bottom right,navy,black ) ;
@@ -396,7 +452,8 @@
   import MainSearch from '~/components/SearchComponents/MainSearch.vue'
   import MainFooter from '~/components/FooterComponents/MainFooter.vue'
   import UnderLinedMenu from '~/components/MoviePage/UnderLinedMenu.vue'
-  import VueSlider from '~/components/MoviePage/VueSlider.vue'
+  import NewComment from '~/components/Comment/NewComment.vue'
+  import OldComment from '~/components/Comment/OldComment.vue'
   import axios from 'axios'
 
   export default {
@@ -404,13 +461,23 @@
       MainHeader,
       MainFooter,
       UnderLinedMenu,
-      VueSlider
+      NewComment,
+      OldComment
     },
     data(){
       return {
         movie:{
-          type:{}
+          type:{
+            String
+          }
+        },
+        img:{
+          type:{
+            String
+          }
         }
+
+
       }
     },
     mounted() {
@@ -420,7 +487,9 @@
     async asyncData({ params, error }) {
       try {
         let id = params.movieInf;
+//        this.movie = id;
         console.log("still waiting .....");
+
         let data = await axios.get('http://localhost:8050/movies/'+id+'/details');
         console.log("received");
         console.log(data.data);
@@ -428,13 +497,24 @@
         console.log("this is recieved fields : "+data.data[0].Title);
         return data.data[0];
       }catch (e) {
+        console.log(e);
         error({ message: 'Movie not found', statusCode: 404 })
       }
     },
     methods:{
       movieInfo(){
-        let url = window.location.toString();
-        console.log("this is from me : " + url+" movie : "+this.movie);
+        let url = window.location.toString().split('/');
+        this.movie=url[url.length-1];
+        this.img='/'+this.movie+'.jpg';
+        console.log("this is from me : " + url[url.length-1]+" movie : "+this.movie);
+      },
+      addMovie(){
+        this.$router.push('/Movie/addMovie');
+      },
+      empty(mv){
+        if(mv.length===0)
+          return false;
+        return true;
       }
     }
 

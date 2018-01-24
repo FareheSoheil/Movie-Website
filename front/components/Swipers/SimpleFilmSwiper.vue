@@ -9,7 +9,6 @@
           <span>دوبله</span>
           <span>انیمیشن</span>
           <span>مستند</span>
-          <!--<span class="col-md-offset-right-11">abbas</span>-->
         </div>
         <div id="bests" class="col-md-3 col-sm-offset-right-5">
         <span>برترین عناوین</span>
@@ -21,7 +20,7 @@
         <div id="simple-slide" class="swiper-slide"  v-for="(ss,index) in swiperSlides" :key="index">
 
             <div class="swiper-item simple-item">
-              <img :src="ss.Poster">
+              <img :src="srcGen(ss._id)">
               <over-lay @click="nextPage(ss._id)" :name="ss.Title" :year="ss.Year"></over-lay>
             </div>
 
@@ -33,8 +32,6 @@
       <div class="swiper-button-next" slot="button-next"></div>
     </div>
   </div>
-
-
 
 </template>
 <style>
@@ -160,58 +157,11 @@
       shiftSlide() {
         this.swiperSlides.shift()
       },
+      srcGen(txt){
+        return '/'+txt+'.jpg';
+      }
     }
 
   }
-  //<!--//  export default {-->
-  //<!--//    data() {-->
-  //<!--//      return {-->
-  //<!--//        swiperOption: {-->
-  //<!--//          slidesPerView: 5,-->
-  //<!--//          spaceBetween: 50,-->
-  //<!--//          // init: false,-->
-  //<!--//          pagination: {-->
-  //<!--//            el: '.swiper-pagination',-->
-  //<!--//            clickable: true-->
-  //<!--//          },-->
-  //<!--//          breakpoints: {-->
-  //<!--//            1024: {-->
-  //<!--//              slidesPerView: 4,-->
-  //<!--//              spaceBetween: 40-->
-  //<!--//            },-->
-  //<!--//            768: {-->
-  //<!--//              slidesPerView: 3,-->
-  //<!--//              spaceBetween: 30-->
-  //<!--//            },-->
-  //<!--//            640: {-->
-  //<!--//              slidesPerView: 2,-->
-  //<!--//              spaceBetween: 20-->
-  //<!--//            },-->
-  //<!--//            320: {-->
-  //<!--//              slidesPerView: 1,-->
-  //<!--//              spaceBetween: 10-->
-  //<!--//            }-->
-  //<!--//          }-->
-  //<!--//        }-->
-  //<!--//      }-->
-  //<!--//    }-->
-  //<!--//  }-->
 </script>
-<!--<template>-->
-<!--<div class="ctr">-->
-<!--<div v-swiper:mySwiper="swiperOption">-->
-<!--<div class="swiper-wrapper">-->
-<!--<div class="swiper-slide" v-for="(banner,index) in banners" :key="index">-->
-<!--<img :src="banner">-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="swiper-pagination"></div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</template>-->
 
-<!--<script>-->
-<!--export default {-->
-
-
-<!--</script>-->

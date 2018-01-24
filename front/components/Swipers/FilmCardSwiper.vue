@@ -4,13 +4,11 @@
     <div id="card-swiper" v-swiper:mySwiper="swiperOption">
       <div class="swiper-wrapper">
         <div id="card-slide" class="swiper-slide" v-for="(ss,index) in swiperSlides" :key="index">
-
           <div class="swiper-img-container" :style="{'background-color':colors[index%(colors.length)].upper}">
             <div class="swiper-item card" >
-              <img class="card-item" :src="ss.Poster">
+              <img class="card-item" :src="srcGen(ss._id)">
             </div>
           </div>
-
           <div  class="bottomDiv" :style="{'background-color':colors[index%(colors.length)].bottom}" >
             <span class="genre" v-for="(g,i) in ss.Genre.split(',') " v-if="i<2" :key="i" >{{g}}</span>
             <div id="rate-qual">
@@ -18,7 +16,6 @@
              <i>bluray</i>
             </div>
           </div>
-
           <over-lay @click="nextPage(ss._id)" :name="ss.Title" :year="ss.Year"></over-lay>
         </div>
       </div>
@@ -112,10 +109,8 @@
         swiperSlides: [],
         swiperOption: {
           pagination: {
-//            el: '.swiper-pagination',
             clickable: true
           },
-//          loop:true,
           slidesPerView: 6,
           spaceBetween: 30,
           navigation: {
@@ -173,8 +168,8 @@
       shiftSlide() {
         this.swiperSlides.shift()
       },
-      hello(){
-        console.log("hiiiiiiiiiiiiiiiiiiiii");
+      srcGen(txt){
+        return '/'+txt+'.jpg';
       }
     }
 
