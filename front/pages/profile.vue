@@ -1,5 +1,6 @@
 <template>
   <div >
+    <main-header></main-header>
     <div class="container shabnam profile-container" >
       <div class="row profile-menue">
         <div class="col-md-2 col-md-offset-right-1 active">تنظیمات</div>
@@ -135,11 +136,13 @@
 <script>
   import MButton from '~/components/SearchComponents/MButton.vue'
   import MainFooter from '~/components/FooterComponents/MainFooter.vue'
+  import MainHeader from '~/components/main/MainHeader.vue'
 
   export default {
     components : {
       MButton,
-      MainFooter
+      MainFooter,
+      MainHeader
     }
   }
 </script>
