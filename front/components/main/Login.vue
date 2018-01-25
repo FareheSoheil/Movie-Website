@@ -5,7 +5,7 @@
         ورود / عضویت
 
       </div>
-      <i v-if="!login"  class="fa fa-sign-in fa-2x"></i>
+      <i @click="editPage" v-if="!login"  class="enter fa fa-sign-in fa-2x"></i>
 
     </div>
 
@@ -17,11 +17,19 @@
       return {
         login:false
       }
+    },
+    methods :{
+      editPage(){
+        window.open('/profile','_blank');
+      }
     }
   }
 </script>
 
 <style>
+  .enter {
+    cursor: pointer;
+  }
   #loginBtn {
     border: 2px solid blue;
     border-radius: 4px;
@@ -57,3 +65,4 @@
     }
   }
 </style>
+
