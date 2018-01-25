@@ -94,7 +94,7 @@ module.exports = [
           });
           new_movie.save(function(err){
             if(err) {console.log(err);reply("failure");}
-            else { console.log("created");reply("success");}
+            else { console.log("movie ............. .............. created");reply("success");}
           });
         });
       }

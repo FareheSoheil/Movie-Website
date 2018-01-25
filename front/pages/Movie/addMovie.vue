@@ -186,8 +186,6 @@
         ) alert('لطفا ّهمه ی فیلد ها را پر کنید ');
         else {
           try {
-            alert("done");
-            fd = new FormData();
 
             const res = await this.$axios.$post('http://localhost:8050/submit', {
               Title : this.title,

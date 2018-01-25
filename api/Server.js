@@ -5,7 +5,7 @@ const server = new Hapi.Server();
 
 let routes = require('./URLs/allRoutes');
 
-console.log(routes);
+// console.log(routes);
 
 server.connection({ port: 8050, host: 'localhost' ,routes: { cors: true }});
 
