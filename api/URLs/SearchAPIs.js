@@ -11,12 +11,12 @@ module.exports = [
       let db = mongoose.connection;
 
       //prepare the query
-      let lowerArray = request.params.q.toLowerCase().split(' ');
-      let finalString = '';
-      for (let i=0;i<lowerArray.length;i++){
-        let res = lowerArray[i].charAt(0).toUpperCase()+lowerArray[i].slice(1);
-        finalString += res+' ';
-      }
+      // let lowerArray = request.params.q.toLowerCase().split(' ');
+      // let finalString = '';
+      // for (let i=0;i<lowerArray.length;i++){
+      //   let res = lowerArray[i].charAt(0).toUpperCase()+lowerArray[i].slice(1);
+      //   finalString += res+' ';
+      // }
       // { $regex: /Ghost/, $options: 'i' }
       // finalString.slice(0,-1)
       //once connected , do stuff
@@ -25,7 +25,7 @@ module.exports = [
         let name = request.params.q;
         // name = name+;
         console.log("this is fixed name : "+new RegExp(name));
-        let mvs = Movie.find({'Title':{ $regex:new RegExp(name)  , $options: 'i' }});
+        let mvs = Movie.find({'Title':{ $regex:new RegExp(name)  , $options: 'i' }}).limit(1);
         console.log("this is params : "+request.params.q);
         mvs.exec(function (err, movie) {
           mongoose.connection.close();

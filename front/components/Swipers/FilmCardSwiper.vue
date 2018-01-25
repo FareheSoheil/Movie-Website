@@ -6,7 +6,7 @@
         <div id="card-slide" class="swiper-slide" v-for="(ss,index) in swiperSlides" :key="index">
           <div class="swiper-img-container" :style="{'background-color':colors[index%(colors.length)].upper}">
             <div class="swiper-item card" >
-              <img class="card-item" :src="ss.Poster">
+              <img class="card-item" :src="srcGen(ss.Poster,ss._id)">
             </div>
           </div>
           <div  class="bottomDiv" :style="{'background-color':colors[index%(colors.length)].bottom}" >
@@ -168,8 +168,11 @@
       shiftSlide() {
         this.swiperSlides.shift()
       },
-      srcGen(txt){
-        return '/'+txt+'.jpg';
+      srcGen(txt,id){
+        if(txt.substring(0,4) === 'data')
+          return txt;
+        else
+          return '/'+id+'.jpg';
       }
     }
 

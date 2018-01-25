@@ -44,8 +44,8 @@
             <div class="row" id="movieContainer"  >
               <div class="col-10" id="detailContainer">
                 <div class="row"><i>کارگردان : </i>{{Director}}</div>
-                <div class="row"><i>نویسندگان :‌ </i>{{Writer}}</div>
-                <div class="row"><i>بازیگران : </i>{{Actors}}</div>
+                <div class="row"><i>نویسندگان :‌ </i>{{Writer[0]}}</div>
+                <div class="row"><i>بازیگران : </i>{{Actors[0]}}</div>
               </div>
             </div>
           <!--</div>-->
@@ -56,7 +56,20 @@
       </div>
 
     </div>
-    <under-lined-menu></under-lined-menu>
+    <!--<under-lined-menu></under-lined-menu>-->
+
+    <div class="container" id="sliderContainer">
+      <div class="row" id="slider">
+        <!--active: isActive, 'text-danger': hasError-->
+        <div class="col-md-1"><div @click="clicked(0)" :class="{ active:isActive[0]}" ><a> دانلود</a></div></div>
+        <div class="col-md-2"><div @click="clicked(1)" :class="{ active:isActive[1]}"><a>زیرنویس</a> </div></div>
+        <div class="col-md-2"><div @click="clicked(2)" :class="{active:isActive[2]}"><a>نظر کاربران</a> </div></div>
+        <div class="col-md-2"><div @click="clicked(3)" :class="{active:isActive[3]}"><a>نقد و بررسی</a></div></div>
+        <div class="col-md-2"><div @click="clicked(4)" :class="{active:isActive[4]}"><a>عوامل فیلم</a></div></div>
+        <div class="col-md-1"><div @click="clicked(5)" :class="{active:isActive[5]}"><a>جوایز</a></div></div>
+        <div class="col-md-1"><div @click="clicked(6)" :class="{active:isActive[6]}"><a>گالری</a></div></div>
+      </div>
+    </div>
     <!--<div class="container">-->
      <!--<div class="row">-->
        <!--<div class="col-md-12">-->
@@ -88,37 +101,15 @@
      <!--</div>-->
     <!--</div>-->
 
-
+    <div v-if="downloadTab">
+      <download></download>
+    </div>
+    <div v-if="subtitleTab">
+      <h5 class="pm">This is Subtitle</h5>
+    </div>
     <div v-if="commentTab">
       <new-comment :movieId="movie"></new-comment>
-      <div id="wholeContainer">
-        <div class="container" id="progressContainer">
-          <div class="row">
-            <div class="col-5">
-              <div style="color: mediumspringgreen">ارزش دانلود از ۱۰ </div>
-              <div class="progress" >
-                <div class="progress-bar bg-success"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%;"></div>
-              </div>
-              <div style="color: darkgray;font-size: 12px;">
-                نتایج آرای کاربران بر اساس کارگردانی+فیلمنامه+بازیگران
-              </div>
-            </div>
-            <div class="col-4">
-              <div id="middleDiv">
-                ۵۵ نفر از ۶۲ نفر تماشای این انیمیشن را پیشنهاد کرده اند
-              </div>
-            </div>
-            <div class="col-3" id="rateContainer">
-              <div>شما هم بر اساس ارزش دانلود به انیمیشن رای دهید</div>
-              <button>
-                امتیاز دهید
-              </button>
-
-            </div>
-          </div>
-          <hr id="hr1">
-        </div>
-      </div>
+      <rate></rate>
       <div class="container" id="addMovie">
         <div class="row">
           <div class="col-md-6 col-md-offset-right-2" id="addMovietxt">
@@ -131,8 +122,23 @@
       </div>
       <old-comment :movieId="movie"></old-comment>
     </div>
+    <div v-if="critisism">
+      <h5 class="pm" >This is Critisism</h5>
+    </div>
+
+    <div v-if="castTab">
+      <h5 class="pm" >This is Casts</h5>
+    </div>
+
+    <div v-if="awarrdTab">
+      <h5 class="pm" >This is Award</h5>
+    </div>
+
+    <div v-if="galleryTab">
+      <h5 class="pm" >This is Gallery</h5>
+    </div>
+
     <main-footer></main-footer>
-    <!--<button>hhhhhhhhhh</button>-->
 
   </div>
 </template>
@@ -145,10 +151,18 @@
     border: 2px solid red;
     width: 14%;
   }
+  /*underlined menue*/
   #addMovietxt{
     padding: 15px 10px 15px 0;
     color: darkgoldenrod;
     font-size: 17px;
+  }
+  .pm {
+    font-size: 50px;
+    padding: 45px;
+    text-align: center;
+    margin: 55px 15px 55px 15px;
+
   }
   #addMovieBtn {
     border-radius: 6px;
@@ -208,21 +222,7 @@
     width: 75%;
     top: -6px;
   }
-  #expContainer{
-    font-size: 14px;
-    background-color: darkorange;
-    padding-right: 70px;
-    padding-bottom: 15px;
-    padding-top: 10px;
-  }
-  #nameTitle{
-    padding-bottom: 10px;
-  }
-  #nameTitle , #genre div {
-    display: inline-block;
-    /*font-size: 12px;*/
-    color: white;
-  }
+
 
   #detailContainer .row{
     margin-bottom: 12px;
@@ -293,189 +293,30 @@
     color: white;
   }
 
-  .fa-caret-down {
-    float: left;
-    margin-top: 5px;
-    /*margin-right: 40%;*/
-    /*bottom: -15px;*/
-  }
-  .allLangBtn {
-    border: 1px solid black;
-    background-color: white;
-    width: 85px;
+  #slider {
+    /*border: 2px solid salmon;*/
+    padding-top: 10px;
+    border-bottom: 1px solid gray;
     text-align: center;
-    /*height: inherit;*/
-    padding: 5px;
+  }
+  #slider div {
+    padding-top: 10px;
+
+  }
+  #slider a {
+    text-decoration: none;
     color: black;
-    font-size: 13px;
-    border-radius: 6px;
+    cursor: pointer;
   }
-  .catText {
-    font-size: 12px;
-    color: lightslategray;
+  .active {
+    border-bottom: 3px solid black;
   }
-  #categoryContainer{
-    margin-bottom: 110px;
-  }
-  #categoryContainer div {
-    display: inline-block;
-
-
-  }
-  .category {
-    width: 16%;
-    height: 40px;
-    border: 1px solid lightgray;border-radius: 4px;
-    padding: 5px;
-    padding-right: 8px;
-  }
-  .calendar {
-    width: 23%;
-    text-align: center;
-    float: left;
-  }
-  .allBtn {
-    border: 1px solid blue;
-    background-color: blue;
-    width: 55px;
-    text-align: center;
-    /*height: inherit;*/
-    padding: 5px;
-    color: white;
-    font-size: 13px;
-    border-radius: 6px;
-  }
-  #middleDiv{
-    color: dodgerblue;
-    /*width: 25%;*/
-  }
-  #rateContainer {
-    text-align: center;
-    color: darkgray;
-  }
-  #rateContainer button {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid blue;
-    color: white;
-    background-color: blue;
-  }
-  .progress {
-    height: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: slategray;
-  }
-  #progressContainer{
-    margin-top: 60px;
-    margin-bottom: 40px;
-  }
-  .bg-success{
-    background-color: mediumspringgreen !important;
+  .deactive{
+    border-bottom: none;
   }
 
 
-  .calendar .fa {
-    color: gray;
-  }
-  .calendar .row {
-    margin-bottom: 40px;
-  }
-  #radio1 {
-    margin-left: 20px;
-  }
-  #hr1 {
-    margin-top: 40px;margin-bottom: 50px;
-  }
-  #hr2,#hr3{
-    /*margin-top: 20px;*/
-    border-bottom: 2px solid blue;
-    margin-bottom: 20px;
-  }
-  .bluerayBar{
-    margin-bottom: 10px;
-  }
-  .bluerayBar div {
-    display: inline-block;
-  }
 
-  .volumn {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 8px;
-    width: 12%;
-    border-radius: 0px 6px 6px 0px;
-  }
-  .letter {
-    background-color: #1b1e21;
-    color: white;
-    padding: 6px;
-    text-align: center;
-    width: 5%;
-  }
-  .basket {
-    background-color: #2e3133;
-    color: white;
-    padding: 6px;
-    width: 4%;
-    text-align: center;
-  }
-  .middleBar {
-    border: 2px solid;
-    padding-top:7px;
-    padding-left: 5px;
-    width: 60%;
-  }
-  .middleBar div {
-    margin-right: 20px;
-    padding-left: 10px;
-  }
-  .yellowBorder {
-    border-color: yellow;
-  }
-  .greenBorder {
-    border-color: mediumspringgreen;
-  }
-  .yellowForground {
-    color: yellow;
-  }
-  .greenForground {
-    color:mediumspringgreen
-  }
-  .yellowBackground {
-    background-color: yellow;
-  }
-  .greenBackground {
-    background-color:mediumspringgreen
-  }
-  .fa-flag-o{
-    margin-right: 5px;
-  }
-  .tailBtn {
-    border-radius: 6px 0px 0px 6px;
-    color: white;
-    text-align: center;
-    width: 13%;
-    padding-top: 8px;
-    padding-right: 10px;
-  }
-  #blueRayContainer {
-    margin-bottom: 60px;
-  }
-  .blueBorder {
-    border-color: deepskyblue;
-  }
-  .blueForground{
-    color: deepskyblue;
-  }
-  .blueBackground {
-    background-color: deepskyblue;
-  }
-  #soundTrackContainer {
-    margin-bottom: 50px;
-  }
   @media (max-width: 600px) {
     #wallpaper {
       text-align: center;
@@ -493,6 +334,8 @@
   import MainSearch from '~/components/SearchComponents/MainSearch.vue'
   import MainFooter from '~/components/FooterComponents/MainFooter.vue'
   import UnderLinedMenu from '~/components/MoviePage/UnderLinedMenu.vue'
+  import Rate from '~/components/MoviePage/Rate.vue'
+  import download from '~/components/MoviePage/download.vue'
   import NewComment from '~/components/Comment/NewComment.vue'
   import OldComment from '~/components/Comment/OldComment.vue'
   import axios from 'axios'
@@ -503,7 +346,9 @@
       MainFooter,
       UnderLinedMenu,
       NewComment,
-      OldComment
+      OldComment,
+      Rate,
+      download
     },
     data(){
       return {
@@ -518,7 +363,13 @@
           }
         },
         downloadTab:false,
+        galleryTab:false,
+        awarrdTab:false,
+        castTab:false,
+        subtitleTab:false,
+        critisism:false,
         commentTab:true,
+        isActive:[false,false,true,false,false,false,false]
 
 
       }
@@ -544,6 +395,7 @@
         this.movie=url[url.length-1];
       },
       addMovie(){
+//        window.open('/Movie/addMovie', '_blank');
         window.open('/Movie/addMovie', '_blank');
 //        this.$router.push('/Movie/addMovie');
       },
@@ -557,7 +409,82 @@
         console.log("this is poster url");
         console.log(ps);
         return ps;
-      }
+      },
+      clicked(num,e) {
+        if(num===0) {
+          this.downloadTab = true;
+          this.subtitleTab=false;
+          this.commentTab=false;
+          this.critisism=false;
+          this.castTab=false;
+          this.awarrdTab=false;
+          this.galleryTab=false;
+        }
+        if(num===1) {
+          this.downloadTab = false;
+          this.subtitleTab=true;
+          this.commentTab=false;
+          this.critisism=false;
+          this.castTab=false;
+          this.awarrdTab=false;
+          this.galleryTab=false;
+        }
+        if(num===2) {
+          this.downloadTab = false;
+          this.subtitleTab=false;
+          this.commentTab=true;
+          this.critisism=false;
+          this.castTab=false;
+          this.awarrdTab=false;
+          this.galleryTab=false;
+        }
+        if(num===3) {
+          this.downloadTab = false;
+          this.subtitleTab=false;
+          this.commentTab=false;
+          this.critisism=true;
+          this.castTab=false;
+          this.awarrdTab=false;
+          this.galleryTab=false;
+        }
+        if(num===4) {
+          this.downloadTab = false;
+          this.subtitleTab=false;
+          this.commentTab=false;
+          this.critisism=false;
+          this.castTab=true;
+          this.awarrdTab=false;
+          this.galleryTab=false;
+        }
+        if(num===5) {
+          this.downloadTab = false;
+          this.subtitleTab=false;
+          this.commentTab=false;
+          this.critisism=false;
+          this.castTab=false;
+          this.awarrdTab=true;
+          this.galleryTab=false;
+        }
+        if(num===6) {
+          this.downloadTab = false;
+          this.subtitleTab=false;
+          this.commentTab=false;
+          this.critisism=false;
+          this.castTab=false;
+          this.awarrdTab=false;
+          this.galleryTab=true;
+        }
+
+        console.log("clicked on : "+num);
+        let i=0;
+        for (i = 0; i < this.isActive.length; i++) {
+          this.isActive[i] = false;
+        }
+        console.log("active array : "+this.isActive);
+        this.isActive[num]=true;
+        this.$emit('click',e);
+        console.log("new active array : "+this.isActive);
+      },
     }
 
   }

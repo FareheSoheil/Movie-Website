@@ -64,10 +64,7 @@
     },
     data() {
       return {
-        search:''
-
-        ,
-        options :['a','b','c'],
+        search:'',
         selected:'',
         val:{type:String}
       }
@@ -83,7 +80,8 @@
           let data = await this.$axios.$get('http://localhost:8050/search/'+Title);
           if(data.length>0){
             let id = data[0]._id;
-            this.$router.push('/Movie/'+id);
+            window.open('/Movie/'+id,'_blank');
+            this.search = '';
           }else {
             this.search = "هیچ فیلمی با این نام یافت نشد"
           }

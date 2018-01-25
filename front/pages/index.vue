@@ -12,8 +12,8 @@
 
     <film-card-swiper></film-card-swiper>
     <main-footer></main-footer>
-    <button @click="go()">ajax for god's sake</button>
-    {{s}}
+    <!--<button @click="go()">ajax for god's sake</button>-->
+    <!--{{s}}-->
   </div>
 </template>
 

@@ -7,7 +7,7 @@
               <label style="padding-top: 10px;">نام فیلم :‌  </label> &nbsp;
             </div>
             <div class="col-md-10">
-              <input class="author" v-model="title" required name="author" type="text" >
+              <input  v-model="title" required  type="text" >
             </div>
           </div>
           <div class="row">
@@ -15,7 +15,7 @@
               <label style="padding-top: 10px;">سال تولید فیلم :‌  </label> &nbsp;
             </div>
             <div class="col-md-10">
-              <input class="author" v-model="year" required name="author" type="number" >
+              <input  v-model="year" required  type="number" >
             </div>
           </div>
           <div class="row">
@@ -23,7 +23,7 @@
               <label style="padding-top: 10px;">امتیاز IMDB از ۱۰ :‌  </label> &nbsp;
             </div>
             <div class="col-md-10">
-              <input class="author" v-model="rating" required name="author" type="number" >
+              <input  v-model="rating" required  type="number" >
             </div>
           </div>
           <div class="row">
@@ -31,7 +31,7 @@
               <label style="padding-top: 10px;">تعداد آرای IMDB :‌  </label> &nbsp;
             </div>
             <div class="col-md-10">
-              <input class="author" v-model="imdbVotes" required name="author" type="number" >
+              <input  v-model="imdbVotes" required  type="number" >
             </div>
           </div>
           <div class="row">
@@ -39,7 +39,7 @@
               <label style="padding-top: 10px;">  زمان فیلم (دقیقه) : </label> &nbsp;
             </div>
             <div class="col-md-10">
-              <input class="author" v-model="runtime" required name="author" type="number" >
+              <input  v-model="runtime" required  type="number" >
             </div>
           </div>
           <div class="row">
@@ -56,7 +56,16 @@
               <label style="padding-top: 10px;">کشور :‌  </label> &nbsp;
             </div>
             <div class="col-md-10">
-              <input class="author" v-model="country" required name="author" type="text" >
+              <input  v-model="country" required  type="text" >
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2">
+              <label style="padding-top: 10px;">زبان :‌  </label> &nbsp;
+            </div>
+            <div class="col-md-10">
+              <input  v-model="language" required  type="text" >
             </div>
           </div>
 
@@ -73,7 +82,7 @@
               <label style="padding-top: 10px;">ژانر فیلم :‌  </label> &nbsp;
             </div>
             <div class="col-md-10">
-              <input class="author" v-model="genre" required name="author" type="text" >
+              <input  v-model="genre" required  type="text" >
             </div>
           </div>
 
@@ -82,7 +91,7 @@
               <label style="padding-top: 10px;">کارگردان فیلم :‌  </label> &nbsp;
             </div>
             <div class="col-md-10">
-              <input class="author" v-model="director" required name="author" type="text" >
+              <input  v-model="director" required  type="text" >
             </div>
           </div>
           <div class="row">
@@ -164,38 +173,49 @@
         actors:[],
         director:'',
         writers:[],
-        cover:'salam',
+        cover:'',
       }
     },
     methods:{
       async sendMovie(){
-            try {
-              console.log("caaaaaaaaaaaaaaaal");
-              const res = await this.$axios.$post('http://localhost:8050/submit', {
-                Title : this.title,
-                Year : this.year,
-                Director : this.director,
-                Runtime : this.runtime,
-                imdbVotes : this.imdbVotes,
-                Language : this.language,
-                Country : this.country,
-                Genre: this.genre,
-                Rating :[{"Value": this.rating}],
-                Plot : this.plot,
-                Actors : this.actors,
-                Writer : this.writers,
-                Cover: this.cover
-              });
-              console.log("generator called");
-              console.log(res);
+        if( this.title===''   || this.year===''      || this.director===''||
+            this.runtime==='' || this.imdbVotes==='' || this.language===''||
+            this.country==='' || this.genre===''     || this.rating===''  ||
+            this.plot===''    || this.actors===''    || this.writers==='' ||
+            this.cover===''
+        ) alert('لطفا ّهمه ی فیلد ها را پر کنید ');
+        else {
+          try {
+            alert("done");
+            fd = new FormData();
+
+            const res = await this.$axios.$post('http://localhost:8050/submit', {
+              Title : this.title,
+              Year : this.year,
+              Director : this.director,
+              Runtime : this.runtime,
+              imdbVotes : this.imdbVotes,
+              Language : this.language,
+              Country : this.country,
+              Genre: this.genre,
+              Rating :[{"Value": this.rating}],
+              Plot : this.plot,
+              Actors : this.actors,
+              Writer : this.writers,
+              Cover: this.cover
+            });
+            console.log("generator called");
+            console.log(res);
             if (res === "success")
               alert("فیلم شما ثبت شد");
             else
               alert("خطا هنگام ثبت فیلم");
-            }catch (err) {
-              console.log(err);
-              alert('خطا هنگام ثبت فیلم');
-            }
+          }catch (err) {
+            console.log(err);
+            alert('خطا هنگام ثبت فیلم');
+          }
+        }
+
         },
 
       onFileChange(e) {
