@@ -12,10 +12,12 @@ var movieSchema = new Schema({
     imdbVotes:String,
     Language:String,
     Country:String,
-    Rating:{type: Array , "default":[]},
+    Genre:String,
+    Ratings:{type: Array , "default":[]},
     Plot:String,
     Actors:{type : Array , "default" : [] },
-    Writer:{type : Array , "default" : [] }
+    Writer:{type : Array , "default" : [] },
+    Poster:{}
 
 });
 module.exports = mongoose.model('movies', movieSchema);

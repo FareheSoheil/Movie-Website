@@ -2,28 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f1201f7-4380-448f-866f-215241097c8f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/URLs/CommentAPIs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/db_schemas/comment_schema.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/components/Comment/NewComment.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/components/Comment/OldComment.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/components/Slider/VueCompSlider.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/components/avatar/avatar.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/pages/Movie/addMovie.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front/plugins/vueslider.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/front/components/MoviePage/VueSlider.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/front/plugins/dropDown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/front/pages/salein/_test.vue" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/URLs/MovieAPIS.js" afterPath="$PROJECT_DIR$/api/URLs/MovieAPIS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/URLs/allRoutes.js" afterPath="$PROJECT_DIR$/api/URLs/allRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/URLs/SearchAPIs.js" afterPath="$PROJECT_DIR$/api/URLs/SearchAPIs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/db_schemas/movie_schema.js" afterPath="$PROJECT_DIR$/api/db_schemas/movie_schema.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/findMovie.js" afterPath="$PROJECT_DIR$/api/findMovie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/assets/css/global.css" afterPath="$PROJECT_DIR$/front/assets/css/global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/components/Comment/NewComment.vue" afterPath="$PROJECT_DIR$/front/components/Comment/NewComment.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/components/MoviePage/UnderLinedMenu.vue" afterPath="$PROJECT_DIR$/front/components/MoviePage/UnderLinedMenu.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/components/Swipers/FilmCardSwiper.vue" afterPath="$PROJECT_DIR$/front/components/Swipers/FilmCardSwiper.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/components/Swipers/SimpleFilmSwiper.vue" afterPath="$PROJECT_DIR$/front/components/Swipers/SimpleFilmSwiper.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/pages/Movie/_movieInf.vue" afterPath="$PROJECT_DIR$/front/pages/Movie/_movieInf.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/pages/index.vue" afterPath="$PROJECT_DIR$/front/pages/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nuxt.config.js" afterPath="$PROJECT_DIR$/nuxt.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front/pages/Movie/addMovie.vue" afterPath="$PROJECT_DIR$/front/pages/Movie/addMovie.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
@@ -38,7 +27,139 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="addMovie.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/pages/Movie/addMovie.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="170" column="24" lean-forward="false" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#274#280#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#600#606#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#930#936#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1260#1266#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1595#1601#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#1916#1922#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#2213#2219#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#7;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#2539#2545#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#8;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#2824#2830#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#9;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#3150#3156#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#10;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#3479#3485#0" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#11;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#3773#3779#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OldComment.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/components/Comment/OldComment.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1500">
+              <caret line="101" column="25" lean-forward="false" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_movieInf.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/pages/Movie/_movieInf.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="546" column="37" lean-forward="false" selection-start-line="546" selection-start-column="37" selection-end-line="546" selection-end-column="37" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#!!top" expanded="false" />
+                <element signature="e#11254#11338#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnderLinedMenu.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/components/MoviePage/UnderLinedMenu.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="46" column="41" lean-forward="false" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CircleButton.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/components/SearchComponents/CircleButton.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="7" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="11" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieAPIS.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/URLs/MovieAPIS.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="71" column="18" lean-forward="true" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+              <folding>
+                <element signature="e#141#799#0" expanded="false" />
+                <element signature="e#805#1385#0" expanded="false" />
+                <element signature="e#1391#2027#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleFilmSwiper.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/components/Swipers/SimpleFilmSwiper.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="145" column="8" lean-forward="true" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="46" />
+              <folding>
+                <element signature="n#style#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchAPIs.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/URLs/SearchAPIs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilmCardSwiper.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/components/Swipers/FilmCardSwiper.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="156" column="46" lean-forward="false" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,13 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>banners</find>
-      <find>md</find>
-      <find>xs</find>
-      <find>imgContainer</find>
-      <find>firstR</find>
-      <find>imdbRate</find>
-      <find>imdbvotes</find>
       <find>deta</find>
       <find>border</find>
       <find>border:</find>
@@ -78,6 +192,17 @@
       <find>text</find>
       <find>style=&quot;border-radius: 3px;border: 1px solid gray;margin: 10px 0 10px 0;&quot;</find>
       <find>pos</find>
+      <find>=</find>
+      <find>;</find>
+      <find>required name=&quot;comment&quot;</find>
+      <find>subm</find>
+      <find>sub</find>
+      <find>:v-model</find>
+      <find>`</find>
+      <find>file</find>
+      <find>length</find>
+      <find>img</find>
+      <find>makePo</find>
     </findStrings>
     <replaceStrings>
       <replace>xs</replace>
@@ -85,6 +210,9 @@
       <replace>''</replace>
       <replace>let</replace>
       <replace>7</replace>
+      <replace>:</replace>
+      <replace>,</replace>
+      <replace>v-model</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pages</dir>
@@ -120,10 +248,8 @@
         <option value="$PROJECT_DIR$/api/useRoute.js" />
         <option value="$PROJECT_DIR$/front/plugins/vueSelect.js" />
         <option value="$PROJECT_DIR$/nuxt.config.js" />
-        <option value="$PROJECT_DIR$/api/URLs/SearchAPIs.js" />
         <option value="$PROJECT_DIR$/front/components/SearchComponents/SearchInput.vue" />
         <option value="$PROJECT_DIR$/front/components/FooterComponents/MainFooter.vue" />
-        <option value="$PROJECT_DIR$/front/components/SearchComponents/CircleButton.vue" />
         <option value="$PROJECT_DIR$/front/components/SearchComponents/SearchTitle.vue" />
         <option value="$PROJECT_DIR$/front/components/SearchComponents/MainSearch.vue" />
         <option value="$PROJECT_DIR$/front/components/Swipers/OverLay.vue" />
@@ -135,19 +261,21 @@
         <option value="$PROJECT_DIR$/api/db_schemas/comment_schema.js" />
         <option value="$PROJECT_DIR$/front/components/MoviePage/NewComment.vue" />
         <option value="$PROJECT_DIR$/front/pages/index.vue" />
-        <option value="$PROJECT_DIR$/api/URLs/MovieAPIS.js" />
         <option value="$PROJECT_DIR$/front/components/Slider/VueCompSlider.vue" />
-        <option value="$PROJECT_DIR$/front/components/MoviePage/UnderLinedMenu.vue" />
         <option value="$PROJECT_DIR$/front/assets/css/global.css" />
         <option value="$PROJECT_DIR$/api/URLs/CommentAPIs.js" />
-        <option value="$PROJECT_DIR$/front/components/Comment/NewComment.vue" />
         <option value="$PROJECT_DIR$/front/components/Comment/OldComment.vue" />
         <option value="$PROJECT_DIR$/front/components/avatar/avatar.vue" />
+        <option value="$PROJECT_DIR$/front/components/Comment/NewComment.vue" />
         <option value="$PROJECT_DIR$/front/pages/Movie/addMovie.vue" />
-        <option value="$PROJECT_DIR$/front/pages/Movie/_movieInf.vue" />
+        <option value="$PROJECT_DIR$/api/db_schemas/movie_schema.js" />
+        <option value="$PROJECT_DIR$/api/URLs/MovieAPIS.js" />
+        <option value="$PROJECT_DIR$/front/components/SearchComponents/CircleButton.vue" />
+        <option value="$PROJECT_DIR$/front/components/MoviePage/UnderLinedMenu.vue" />
         <option value="$PROJECT_DIR$/front/components/Swipers/SimpleFilmSwiper.vue" />
         <option value="$PROJECT_DIR$/front/components/Swipers/FilmCardSwiper.vue" />
-        <option value="$PROJECT_DIR$/api/db_schemas/movie_schema.js" />
+        <option value="$PROJECT_DIR$/front/pages/Movie/_movieInf.vue" />
+        <option value="$PROJECT_DIR$/api/URLs/SearchAPIs.js" />
       </list>
     </option>
   </component>
@@ -185,6 +313,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -232,13 +361,6 @@
               <item name="Nuxt-Client" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="avatar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Nuxt-Client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Nuxt-Client" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Comment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -247,6 +369,13 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="MoviePage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nuxt-Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nuxt-Client" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchComponents" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Nuxt-Client" type="b2602c69:ProjectViewProjectNode" />
@@ -268,17 +397,10 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="Movie" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Nuxt-Client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Nuxt-Client" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,17 +465,19 @@
       <workItem from="1516687443820" duration="13030000" />
       <workItem from="1516702926438" duration="29338000" />
       <workItem from="1516773661071" duration="34613000" />
-      <workItem from="1516822048969" duration="10258000" />
+      <workItem from="1516822048969" duration="18570000" />
+      <workItem from="1516868166109" duration="6050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232891000" />
+    <option name="totallyTimeSpent" value="247253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="21" width="1368" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26647145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26647145" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -454,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/components/SearchComponents/CircleButton.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/components/SearchComponents/SearchTitle.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -479,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-376">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,18 +613,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/URLs/SearchAPIs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="192" column="14" lean-forward="false" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -530,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -552,20 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/addMovie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="28" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/db_schemas/comment_schema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -599,22 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/components/MoviePage/UnderLinedMenu.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/URLs/CommentAPIs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.nuxt/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -627,22 +704,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/addMovie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/components/Comment/OldComment.vue">
+    <entry file="file://$PROJECT_DIR$/api/db_schemas/comment_schema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="60" column="26" lean-forward="false" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="43" />
+        <state relative-caret-position="165">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/URLs/CommentAPIs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/components/Comment/NewComment.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="133" column="11" lean-forward="false" selection-start-line="114" selection-start-column="10" selection-end-line="133" selection-end-column="11" />
+        <state relative-caret-position="1380">
+          <caret line="112" column="75" lean-forward="false" selection-start-line="112" selection-start-column="75" selection-end-line="112" selection-end-column="75" />
           <folding>
             <element signature="n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="e#2744#2768#0" expanded="false" />
@@ -653,63 +744,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/pages/Movie/addMovie.vue">
+    <entry file="file://$PROJECT_DIR$/api/db_schemas/movie_schema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="164" column="12" lean-forward="false" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#274#280#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#599#605#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#927#933#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1253#1259#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1581#1587#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1897#1903#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#2172#2178#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#7;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#2495#2501#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#8;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#2806#2812#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#9;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#3131#3137#0" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#10;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#3456#3462#0" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#10;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#11;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#3811#3817#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/URLs/MovieAPIS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="36" selection-end-column="30" />
+        <state relative-caret-position="285">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/pages/Movie/_movieInf.vue">
+    <entry file="file://$PROJECT_DIR$/front/components/Comment/OldComment.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        <state relative-caret-position="1500">
+          <caret line="101" column="25" lean-forward="false" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/components/SearchComponents/CircleButton.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/components/MoviePage/UnderLinedMenu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="46" column="41" lean-forward="false" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/pages/Movie/addMovie.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="170" column="24" lean-forward="false" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
           <folding>
-            <element signature="n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#9960#10044#0" expanded="false" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#274#280#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#600#606#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#930#936#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1260#1266#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1595#1601#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1916#1922#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2213#2219#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#7;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2539#2545#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#8;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2824#2830#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#9;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#3150#3156#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#10;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#3479#3485#0" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#11;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#3773#3779#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/components/Swipers/SimpleFilmSwiper.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="161" column="7" lean-forward="true" selection-start-line="159" selection-start-column="6" selection-end-line="161" selection-end-column="7" />
+        <state relative-caret-position="209">
+          <caret line="145" column="8" lean-forward="true" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#!!top" expanded="false" />
           </folding>
@@ -718,18 +821,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/components/Swipers/FilmCardSwiper.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="172" column="7" lean-forward="false" selection-start-line="172" selection-start-column="7" selection-end-line="172" selection-end-column="7" />
+        <state relative-caret-position="360">
+          <caret line="156" column="46" lean-forward="false" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
           <folding>
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/db_schemas/movie_schema.js">
+    <entry file="file://$PROJECT_DIR$/front/pages/Movie/_movieInf.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="546" column="37" lean-forward="false" selection-start-line="546" selection-start-column="37" selection-end-line="546" selection-end-column="37" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#!!top" expanded="false" />
+            <element signature="e#11254#11338#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/URLs/MovieAPIS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <caret line="71" column="18" lean-forward="true" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+          <folding>
+            <element signature="e#141#799#0" expanded="false" />
+            <element signature="e#805#1385#0" expanded="false" />
+            <element signature="e#1391#2027#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/URLs/SearchAPIs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding />
         </state>
       </provider>

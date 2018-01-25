@@ -20,7 +20,7 @@
         <div id="simple-slide" class="swiper-slide"  v-for="(ss,index) in swiperSlides" :key="index">
 
             <div class="swiper-item simple-item">
-              <img :src="srcGen(ss._id)">
+              <img :src="ss.Poster">
               <over-lay @click="nextPage(ss._id)" :name="ss.Title" :year="ss.Year"></over-lay>
             </div>
 
@@ -143,7 +143,8 @@
           this.swiperSlides = await  this.$axios.$get('http://localhost:8050/movies/recent/'+this.swiperNum);
       },
       async nextPage(id){
-          this.$router.push('/Movie/'+id);
+        window.open('/Movie/' + id, '_blank');
+//          this.$router.push('/Movie/'+id);
       },
       appendSlide() {
         this.swiperSlides.push(this.swiperSlides.length + 1)

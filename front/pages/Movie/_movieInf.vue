@@ -51,59 +51,100 @@
           <!--</div>-->
         </div>
         <div class="col-md-3 col-lg-4"  id="wallpaper" >
-          <img :src="this.img" >
+          <img :src="Poster" >
         </div>
       </div>
 
     </div>
     <under-lined-menu></under-lined-menu>
-    <new-comment :movieId="movie"></new-comment>
-    <div id="wholeContainer">
-      <div class="container" id="progressContainer">
+    <!--<div class="container">-->
+     <!--<div class="row">-->
+       <!--<div class="col-md-12">-->
+         <!--<b-tabs>-->
+           <!--<b-tab title="دانلود" active>-->
+             <!--<br>I'm the first fading tab-->
+           <!--</b-tab>-->
+           <!--<b-tab title="زیر نویس" >-->
+             <!--<br>I'm the second tab content-->
+           <!--</b-tab>-->
+           <!--<b-tab title="نظر کاربران" >-->
+             <!--<br>I'm the second tab content-->
+           <!--</b-tab>-->
+           <!--<b-tab title="نقد و بررسی " >-->
+             <!--<br>I'm the second tab content-->
+           <!--</b-tab>-->
+           <!--<b-tab title="عوامل فیلم" >-->
+             <!--<br>I'm the second tab content-->
+           <!--</b-tab>-->
+           <!--<b-tab title="جوایز" >-->
+             <!--<br>I'm the second tab content-->
+           <!--</b-tab>-->
+           <!--<b-tab title="گالری" >-->
+             <!--<br>I'm the second tab content-->
+           <!--</b-tab>-->
+
+         <!--</b-tabs>-->
+       <!--</div>-->
+     <!--</div>-->
+    <!--</div>-->
+
+
+    <div v-if="commentTab">
+      <new-comment :movieId="movie"></new-comment>
+      <div id="wholeContainer">
+        <div class="container" id="progressContainer">
+          <div class="row">
+            <div class="col-5">
+              <div style="color: mediumspringgreen">ارزش دانلود از ۱۰ </div>
+              <div class="progress" >
+                <div class="progress-bar bg-success"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%;"></div>
+              </div>
+              <div style="color: darkgray;font-size: 12px;">
+                نتایج آرای کاربران بر اساس کارگردانی+فیلمنامه+بازیگران
+              </div>
+            </div>
+            <div class="col-4">
+              <div id="middleDiv">
+                ۵۵ نفر از ۶۲ نفر تماشای این انیمیشن را پیشنهاد کرده اند
+              </div>
+            </div>
+            <div class="col-3" id="rateContainer">
+              <div>شما هم بر اساس ارزش دانلود به انیمیشن رای دهید</div>
+              <button>
+                امتیاز دهید
+              </button>
+
+            </div>
+          </div>
+          <hr id="hr1">
+        </div>
+      </div>
+      <div class="container" id="addMovie">
         <div class="row">
-          <div class="col-5">
-            <div style="color: mediumspringgreen">ارزش دانلود از ۱۰ </div>
-            <div class="progress" >
-              <div class="progress-bar bg-success"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%;"></div>
-            </div>
-            <div style="color: darkgray;font-size: 12px;">
-              نتایج آرای کاربران بر اساس کارگردانی+فیلمنامه+بازیگران
-            </div>
+          <div class="col-md-6 col-md-offset-right-2" id="addMovietxt">
+              <span>برای اضافه کردن فیلم جدید روی  دکمه روبرو کلیک کنید</span>
           </div>
-          <div class="col-4">
-            <div id="middleDiv">
-              ۵۵ نفر از ۶۲ نفر تماشای این انیمیشن را پیشنهاد کرده اند
-            </div>
+          <div class="col-md-4">
+            <button @click="addMovie" id="addMovieBtn">add movie</button>
           </div>
-          <div class="col-3" id="rateContainer">
-            <div>شما هم بر اساس ارزش دانلود به انیمیشن رای دهید</div>
-            <button>
-              امتیاز دهید
-            </button>
-
-          </div>
-        </div>
-        <hr id="hr1">
-      </div>
-    </div>
-    <div class="container" id="addMovie">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-right-2" id="addMovietxt">
-            <span>برای اضافه کردن فیلم جدید روی  دکمه روبرو کلیک کنید</span>
-        </div>
-        <div class="col-md-4">
-          <button @click="addMovie" id="addMovieBtn">add movie</button>
         </div>
       </div>
+      <old-comment :movieId="movie"></old-comment>
     </div>
-
-    <old-comment :movieId="movie"></old-comment>
     <main-footer></main-footer>
     <!--<button>hhhhhhhhhh</button>-->
 
   </div>
 </template>
 <style>
+  .nav-link{
+    color:black;
+  }
+  .nav-tabs .nav-item {
+
+    border: 2px solid red;
+    width: 14%;
+  }
   #addMovietxt{
     padding: 15px 10px 15px 0;
     color: darkgoldenrod;
@@ -475,7 +516,9 @@
           type:{
             String
           }
-        }
+        },
+        downloadTab:false,
+        commentTab:true,
 
 
       }
@@ -487,14 +530,8 @@
     async asyncData({ params, error }) {
       try {
         let id = params.movieInf;
-//        this.movie = id;
-        console.log("still waiting .....");
-
         let data = await axios.get('http://localhost:8050/movies/'+id+'/details');
-        console.log("received");
-        console.log(data.data);
-//        this.movie = data.data;
-        console.log("this is recieved fields : "+data.data[0].Title);
+        console.log(data.data[0]);
         return data.data[0];
       }catch (e) {
         console.log(e);
@@ -505,16 +542,21 @@
       movieInfo(){
         let url = window.location.toString().split('/');
         this.movie=url[url.length-1];
-        this.img='/'+this.movie+'.jpg';
-        console.log("this is from me : " + url[url.length-1]+" movie : "+this.movie);
       },
       addMovie(){
-        this.$router.push('/Movie/addMovie');
+        window.open('/Movie/addMovie', '_blank');
+//        this.$router.push('/Movie/addMovie');
       },
       empty(mv){
         if(mv.length===0)
           return false;
         return true;
+      },
+      makePoster(ps){
+        this.movie = ps;
+        console.log("this is poster url");
+        console.log(ps);
+        return ps;
       }
     }
 

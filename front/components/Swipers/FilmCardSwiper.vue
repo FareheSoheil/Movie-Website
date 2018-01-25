@@ -6,7 +6,7 @@
         <div id="card-slide" class="swiper-slide" v-for="(ss,index) in swiperSlides" :key="index">
           <div class="swiper-img-container" :style="{'background-color':colors[index%(colors.length)].upper}">
             <div class="swiper-item card" >
-              <img class="card-item" :src="srcGen(ss._id)">
+              <img class="card-item" :src="ss.Poster">
             </div>
           </div>
           <div  class="bottomDiv" :style="{'background-color':colors[index%(colors.length)].bottom}" >
@@ -154,7 +154,7 @@
 
       },
       async nextPage(id){
-        this.$router.push('/Movie/'+id);
+        window.open('/Movie/' + id, '_blank');
       },
       appendSlide() {
         this.swiperSlides.push(this.swiperSlides.length + 1)

@@ -101,8 +101,6 @@
         acting:2,
         screen:2,
         show:"none",
-        myText:"",
-        txt:"salammmmm",
         comment:'',
         name:'',
         radioValue:''
@@ -112,8 +110,9 @@
       async postComment() {
         console.log("this.movieId in post :");
         console.log(this.movieId);
+        if(this.comment!=='' && this.name !== '' && this.radioValue!=='' ){
           try {
-              const res = await this.$axios.$post('http://localhost:8050/movies/' + this.movieId + '/comments', {
+            const res = await this.$axios.$post('http://localhost:8050/movies/' + this.movieId + '/comments', {
               directingVote: this.directing,
               actingVote: this.acting,
               screenVote: this.screen,
@@ -132,6 +131,10 @@
             console.log(err);
             alert('خطا هنگام ثبت نظر');
           }
+        }else {
+          alert("لطفا برای ثبت نظر همه ی فیلدها را پر کنید");
+        }
+
       },
       set(){
         if(this.show==="none")

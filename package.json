@@ -29,6 +29,7 @@
     "nuxt": "^1.0.0",
     "vue-awesome-swiper": "^3.1.2",
     "vue-js-dropdown": "^1.0.2",
+    "vue-nav-tabs": "^0.5.6",
     "vue-search-select": "^2.5.0",
     "vue-select": "^2.4.0",
     "vue-slider-component": "^2.5.3",

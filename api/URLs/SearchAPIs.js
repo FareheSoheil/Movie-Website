@@ -17,15 +17,19 @@ module.exports = [
         let res = lowerArray[i].charAt(0).toUpperCase()+lowerArray[i].slice(1);
         finalString += res+' ';
       }
-
+      // { $regex: /Ghost/, $options: 'i' }
+      // finalString.slice(0,-1)
       //once connected , do stuff
       db.on('error', console.error.bind(console, 'connection error:'));
       db.once('open', function () {
         let name = request.params.q;
-        let mvs = Movie.find({'Title':finalString.slice(0,-1)});
+        // name = name+;
+        console.log("this is fixed name : "+new RegExp(name));
+        let mvs = Movie.find({'Title':{ $regex:new RegExp(name)  , $options: 'i' }});
         console.log("this is params : "+request.params.q);
         mvs.exec(function (err, movie) {
           mongoose.connection.close();
+          console.log("this is movie : "+movie);
           reply(movie);
           let i=0;
           movie.forEach(function (m) {
@@ -39,5 +43,4 @@ module.exports = [
       console.log("this is from another file");
     }
     },
-  { method: 'POST', path: '/submit', handler: function (request, reply)  {}},
 ];

@@ -43,15 +43,17 @@
       }
     },
     methods:{
-      clicked(num) {
+      clicked(num,e) {
+        console.log("clicked on : "+num);
         let i=0;
         for (i = 0; i < this.isActive.length; i++) {
           this.isActive[i] = false;
         }
         console.log("active array : "+this.isActive);
         this.isActive[num]=true;
+        this.$emit('click',e);
         console.log("new active array : "+this.isActive);
-      }
+      },
     }
   }
 </script>
