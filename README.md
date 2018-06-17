@@ -1,3 +1,6 @@
+This ReadMe isn't complete yet
+should be updated as the project does
+
 # nuxt-client
 
 > Nuxt.js project
